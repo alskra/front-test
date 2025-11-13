@@ -113,10 +113,10 @@ body {
 .form__btn:disabled {
   opacity: 0.6;
 }
-.form__btn[data-succes] {
+.form__btn[data-success] {
   background-color: #28906F;
 }
-.form__btn[data-succes]:hover {
+.form__btn[data-success]:hover {
   background-color: #1F6E55;
 }
 
