@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/* Тут пишем стили */
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font: 500 16px/1.2 Roboto, sans-serif;
+  color: #FFF;
+  background: #1E1E1E;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  margin: auto;
+  color: #000;
+  border-radius: 16px;
+  background: #FFF;
+}
+@media (width < 576px) {
+  .form {
+    gap: 12px;
+    padding: 12px;
+    border-radius: 12px;
+  }
+}
+
+.form__title {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+@media (width < 576px) {
+  .form__title {
+    font-size: 36px;
+  }
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media (width < 576px) {
+  .form__group {
+    gap: 4px;
+  }
+}
+
+.form__label {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+@media (width < 576px) {
+  .form__label {
+    font-size: 16px;
+  }
+}
+
+.form__field {
+  display: block;
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #000;
+  line-height: 1.4;
+  border-radius: 4px;
+  background: #FFF;
+  transition: 0.15s;
+  transition-property: color, border-color, background-color;
+}
+.form__field::placeholder {
+  color: #999;
+}
+.form__field:placeholder-shown {
+  border-color: #666;
+}
+.form__field:hover {
+  border-color: #333;
+}
+.form__field:disabled {
+  border-color: #666;
+  background: #EEE;
+}
+.form__field[data-error] {
+  border-color: #E90000;
+  background-color: #FFEFEF;
+}
+
+.form__btn {
+  height: 64px;
+  padding: 0 24px;
+  border-radius: 16px;
+  color: #FFF;
+  border: none;
+  background: #000;
+  transition: 0.15s;
+  transition-property: color, border-color, background-color, transform;
+}
+.form__btn:hover {
+  background-color: #333;
+}
+.form__btn:active {
+  transform: scale(0.95);
+}
+.form__btn:disabled {
+  opacity: 0.6;
+}
+.form__btn[data-succes] {
+  background-color: #28906F;
+}
+.form__btn[data-succes]:hover {
+  background-color: #1F6E55;
+}
+
+/*# sourceMappingURL=styles.css.map */

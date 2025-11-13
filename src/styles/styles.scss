@@ -1,0 +1,128 @@
+/* Тут пишем стили */
+$bp: 576px;
+
+body {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	font: 500 16px / 1.2 Roboto, sans-serif;
+	color: #FFF;
+	background: #1E1E1E;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 100%;
+	max-width: 600px;
+	padding: 20px;
+	margin: auto;
+	color: #000;
+	border-radius: 16px;
+	background: #FFF;
+
+	@media (width < $bp) {
+		gap: 12px;
+		padding: 12px;
+		border-radius: 12px;
+	}
+}
+
+.form__title {
+	margin: 0;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+
+	@media (width < $bp) {
+		font-size: 36px;
+	}
+}
+
+.form__group {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+
+	@media (width < $bp) {
+		gap: 4px;
+	}
+}
+
+.form__label {
+	display: inline-block;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1;
+
+	@media (width < $bp) {
+		font-size: 16px;
+	}
+}
+
+.form__field {
+	display: block;
+	width: 100%;
+	padding: 6px 8px;
+	border: 1px solid #000;
+	line-height: 1.4;
+	border-radius: 4px;
+	background: #FFF;
+	transition: 0.15s;
+	transition-property: color, border-color, background-color;
+
+	&::placeholder {
+		color: #999;
+	}
+
+	&:placeholder-shown {
+		border-color: #666;
+	}
+
+	&:hover {
+		border-color: #333;
+	}
+
+	&:disabled {
+		border-color: #666;
+		background: #EEE;
+	}
+
+	&[data-error] {
+		border-color: #E90000;
+		background-color: #FFEFEF;
+	}
+}
+
+.form__btn {
+	height: 64px;
+	padding: 0 24px;
+	border-radius: 16px;
+	color: #FFF;
+	border: none;
+	background: #000;
+	transition: 0.15s;
+	transition-property: color, border-color, background-color, transform;
+
+	&:hover {
+		background-color: #333;
+	}
+
+	&:active {
+		transform: scale(0.95);
+	}
+
+	&:disabled {
+		opacity: 0.6;
+	}
+
+	&[data-succes] {
+		background-color: #28906F;
+
+		&:hover {
+			background-color: #1F6E55;
+		}
+	}
+}
